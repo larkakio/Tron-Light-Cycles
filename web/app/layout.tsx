@@ -16,12 +16,13 @@ const shareTechMono = Share_Tech_Mono({
 });
 
 const BASE_APP_ID =
-  process.env.NEXT_PUBLIC_BASE_APP_ID ?? 'placeholder';
+  process.env.NEXT_PUBLIC_BASE_APP_ID ?? '6a0970691b76c7abf6d06a89';
+
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tron-light-cycles.vercel.app';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
-  ),
+  metadataBase: new URL(SITE_URL),
   title: 'Tron Light Cycles',
   description:
     'Neon grid combat on Base. Swipe to turn, trap rivals, clear sectors.',

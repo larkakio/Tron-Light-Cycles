@@ -14,7 +14,8 @@ Mobile-first neon light-cycle arena on **Base**. Swipe to turn, trap rivals, cle
 cd web && npm install && npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+**Live:** [https://tron-light-cycles.vercel.app](https://tron-light-cycles.vercel.app)  
+**Local:** [http://localhost:3000](http://localhost:3000)
 
 ### Contracts
 
@@ -33,7 +34,8 @@ Copy `.env.example` to `web/.env.local` and fill in:
 
 | Variable | Description |
 |----------|-------------|
-| `NEXT_PUBLIC_BASE_APP_ID` | From [base.dev](https://base.dev) project settings |
+| `NEXT_PUBLIC_SITE_URL` | `https://tron-light-cycles.vercel.app` |
+| `NEXT_PUBLIC_BASE_APP_ID` | `6a0970691b76c7abf6d06a89` ([base.dev](https://base.dev)) |
 | `NEXT_PUBLIC_BUILDER_CODE` | `bc_…` from base.dev → Settings → Builder Code |
 | `NEXT_PUBLIC_CHECK_IN_CONTRACT_ADDRESS` | Deployed `CheckIn` on Base mainnet |
 | `NEXT_PUBLIC_CHAIN_ID` | `8453` (Base mainnet) |
@@ -53,8 +55,10 @@ Copy `.env.example` to `web/.env.local` and fill in:
 
 ## Deploy (Vercel)
 
+- **URL:** https://tron-light-cycles.vercel.app
 - Root Directory: `web`
-- Set all `NEXT_PUBLIC_*` env vars in the project
+- Set all `NEXT_PUBLIC_*` from `.env.example` in Vercel → Environment Variables
+- Base domain verification: `<meta name="base:app_id" content="6a0970691b76c7abf6d06a89" />` in `web/app/layout.tsx`
 
 ## Assets
 
