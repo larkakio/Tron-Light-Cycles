@@ -36,7 +36,7 @@ Copy `.env.example` to `web/.env.local` and fill in:
 |----------|-------------|
 | `NEXT_PUBLIC_SITE_URL` | `https://tron-light-cycles.vercel.app` |
 | `NEXT_PUBLIC_BASE_APP_ID` | `6a0970691b76c7abf6d06a89` ([base.dev](https://base.dev)) |
-| `NEXT_PUBLIC_BUILDER_CODE` | `bc_…` from base.dev → Settings → Builder Code |
+| `NEXT_PUBLIC_BUILDER_CODE` | `bc_4wwccvuz` (base.dev → Builder Codes) |
 | `NEXT_PUBLIC_CHECK_IN_CONTRACT_ADDRESS` | Deployed `CheckIn` on Base mainnet |
 | `NEXT_PUBLIC_CHAIN_ID` | `8453` (Base mainnet) |
 
@@ -50,7 +50,7 @@ Copy `.env.example` to `web/.env.local` and fill in:
 
 - Standard web app (no Farcaster SDK)
 - `<meta name="base:app_id" />` in root layout
-- Builder Code via `dataSuffix` on wagmi config ([docs](https://docs.base.org/apps/builder-codes/app-developers))
+- Builder Code `bc_4wwccvuz` via `Attribution.toDataSuffix` → wagmi `dataSuffix` ([docs](https://docs.base.org/apps/builder-codes/app-developers))
 - Wallet connect sheet rendered via `createPortal` to `document.body`
 
 ## Deploy (Vercel)
