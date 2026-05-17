@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+.env
+.env.local
+web/.env.local
+contracts/out/
+contracts/cache/
+contracts/broadcast/
+.DS_Store
+*.log

@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --void: #050508;
+  --grid-line: #1a1a2e;
+  --cyan: #00f5ff;
+  --magenta: #ff00aa;
+  --amber: #ffaa00;
+  --crimson: #ff2244;
+  --panel: rgba(10, 12, 28, 0.92);
+  --background: var(--void);
+  --foreground: #e8f4ff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-orbitron);
+  --font-mono: var(--font-tech-mono);
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--void);
+  color: var(--foreground);
+  font-family: var(--font-tech-mono), ui-monospace, monospace;
+}
+
+.crt-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.12) 2px,
+    rgba(0, 0, 0, 0.12) 4px
+  );
+  opacity: 0.35;
+}
+
+.neon-border {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--panel), var(--panel)) padding-box,
+    linear-gradient(135deg, var(--cyan), var(--magenta), var(--amber)) border-box;
+}
+
+.glow-text-cyan {
+  text-shadow:
+    0 0 8px var(--cyan),
+    0 0 20px rgba(0, 245, 255, 0.4);
+}
+
+.glow-text-magenta {
+  text-shadow:
+    0 0 8px var(--magenta),
+    0 0 16px rgba(255, 0, 170, 0.35);
+}
+
+@keyframes pulse-border {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-pulse-border {
+  animation: pulse-border 2s ease-in-out infinite;
+}
